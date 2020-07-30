@@ -1,20 +1,11 @@
-# v061
+# v0.6.1 Replace HTML Example:
 
-Welcome to your new v061 project and to the internet computer development community. By default, creating a new project adds this README and some template files to your project directory. You can edit these template files to customize your project and to include your own code to speed up the development cycle.
+- Open 2 terminals
+- Terminal A:
+  - `dfx start`
+- Terminal B:
+  - `dfx canister create --all`
+  - `dfx build`
+  - `dfx canister install --all`
+- Open this link: `echo http://localhost:8000?canisterId=$(dfx canister id v061_assets)`
 
-To get started, you might want to explore the project directory structure and the default configuration file. Working with this project in your development environment will not affect any production deployment or identity tokens.
-
-To learn more before you start working with v061, see the following documentation available online:
-
-- [Quick Start](https://sdk.dfinity.org/docs/quickstart/quickstart.html)
-- [SDK Developer Tools](https://sdk.dfinity.org/docs/developers-guide/sdk-guide.html)
-- [Motoko Programming Language Guide](https://sdk.dfinity.org/docs/language-guide/motoko.html)
-- [Motoko Language Quick Reference](https://sdk.dfinity.org/docs/language-guide/language-manual.html)
-
-If you want to start working on your project right away, you might want to try the following commands:
-
-```bash
-cd v061/
-dfx help
-dfx config --help
-```
