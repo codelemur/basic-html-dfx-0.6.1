@@ -5,16 +5,11 @@
       "type": "motoko"
     },
     "v061_assets": {
-      "dependencies": [
-        "v061"
-      ],
+      "dependencies": ["v061"],
       "frontend": {
         "entrypoint": "src/v061_assets/public/index.js"
       },
-      "source": [
-        "src/v061_assets/assets",
-        "dist/v061_assets/"
-      ],
+      "source": ["src/v061_assets/assets", "dist/v061_assets/"],
       "type": "assets"
     }
   },
@@ -30,9 +25,7 @@
       "type": "ephemeral"
     },
     "tungsten": {
-      "providers": [
-        "https://gw.dfinity.network"
-      ],
+      "providers": ["https://gw.dfinity.network"],
       "type": "persistent"
     }
   },

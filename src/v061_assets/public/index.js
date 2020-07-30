@@ -1,5 +1,11 @@
-import v061 from 'ic:canisters/v061';
+// import the canister (using webpack to resolve the JS for you)
+import canister from 'ic:canisters/v061_assets';
 
-v061.greet(window.prompt("Enter your name:")).then(greeting => {
-  window.alert(greeting);
-});
+// use the asset canister's retrieve method to request a file (the `index.html` file from above)
+canister.retrieve('index.html').then(htmlBytes => {
+  // now that you have the html, decode it and create a new element
+  const html = new TextDecoder().decode(new Uint8Array(htmlBytes));
+  const el = new DOMParser().parseFromString(html, "text/html");
+  // insert your HTML into the bootstrap HTML under `the element with id `"app"`
+  document.body.replaceChild(el.firstElementChild, document.getElementById('app'));
+})
